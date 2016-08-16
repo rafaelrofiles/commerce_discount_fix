@@ -1,0 +1,4 @@
+name = Commerce Discount Fix
+description = CSS Fix on discount creation
+core = 7.x
+package = Custom

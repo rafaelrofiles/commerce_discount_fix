@@ -1,0 +1,18 @@
+<?php
+
+function commerce_discount_fix_preprocess_html(&$variables) {
+	// Add conditional stylesheets for admin pages on admin theme.
+  // reference your current admin theme
+  $theme_path = drupal_get_path('theme', 'seven');
+  // reference your own stylesheet
+  $options = array(
+  	'type'  => 'file',
+  	'group' => CSS_DEFAULT,
+  	'weight' => 0,
+  	'every_page' => TRUE,
+  );
+  drupal_add_css(
+  	drupal_get_path('module', 'commerce_discount_fix') . '/commerce_discount_fix.css',
+  	$options
+  );
+}
